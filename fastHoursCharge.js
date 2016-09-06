@@ -93,6 +93,8 @@ while(numeroDiaHasta === null
 		alert("El valor: " + numeroDiaHasta + " no es valido para el numero de dia final. Intente nuevamente.")
 	}
 	numeroDiaHasta = prompt("Cargar hasta el dia ('hoy' para cargar hasta hoy si estamos en el mes que esta cargando): ", "hoy");
+	
+	intentosRestantes--;
 }
 
 

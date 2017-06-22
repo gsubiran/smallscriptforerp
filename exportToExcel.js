@@ -1,5 +1,7 @@
 function myFnExcelReport(iframeId)
 {
+	//Thanks to: https://stackoverflow.com/a/24081343/2547429
+	
     var tab_text="<table border='2px'><tr bgcolor='#87AFC6'>";
     var textRange; var j=0;
     tab = $('.oe_timesheet_weekly_date_head').closest('table')[0];//document.getElementById('headerTable'); // id of table
@@ -24,7 +26,7 @@ function myFnExcelReport(iframeId)
         document.getElementById(iframeId).document.write(tab_text);
         document.getElementById(iframeId).document.close();
         document.getElementById(iframeId).focus(); 
-        sa=document.getElementById(iframeId).document.execCommand("SaveAs",true,"Say Thanks to Sumit.xls");
+        sa=document.getElementById(iframeId).document.execCommand("SaveAs",true,"horasERP.xls");
     }  
     else                 //other browser not tested on IE 11
         sa = window.open('data:application/vnd.ms-excel,' + encodeURIComponent(tab_text));  
